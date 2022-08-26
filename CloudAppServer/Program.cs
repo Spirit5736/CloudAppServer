@@ -75,7 +75,7 @@ async Task GetUploadedFile(string? id, HttpResponse response)
 async Task DeleteUploadedFile(string? id, HttpResponse response)
 {
     // получаем пользователя по id
-    UploadedFile? user = uploadedFiles.FirstOrDefault((u) => u.Id == id);
+    UploadedFile? user = uploadedFiles.FirstOrDefault(u => u.Id == id);
     // если пользователь найден, удаляем его
     if (user != null)
     {
